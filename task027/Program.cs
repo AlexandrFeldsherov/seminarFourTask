@@ -27,7 +27,7 @@ bool DeterminingNumber(string num)//проверка введены ли чис�
 }
 string TrRe(string num)// удаляет в начале и в конце строки (-),( ),(,),(.) и внутри меняет запятую на String.Empty
 {
-    char[] charsToTrim = {'-','-', '-', ' ', ',', '.', '\'' };//Для Trim, что надо удалить в начале и в конце
+    char[] charsToTrim = { '-', '-', '-', ' ', ',', '.', '\'' };//Для Trim, что надо удалить в начале и в конце
     num = num.Trim(charsToTrim);
     num = num.Replace(",", ""); //заменяет внутри запятые на пустые
     return num;
@@ -35,7 +35,7 @@ string TrRe(string num)// удаляет в начале и в конце стр
 Console.Clear();
 Console.Write("Введите число : ");
 string numbe = Console.ReadLine();
-string number=TrRe(numbe);
+string number = TrRe(numbe);
 while (true)
 {
     if (!String.IsNullOrEmpty(number) && DeterminingNumber(number))//проверка на NULL && проверка введено ли число
@@ -44,7 +44,7 @@ while (true)
     }
     Console.Write("Неверный ввод, введите число: ");
     numbe = Console.ReadLine();
-    number=TrRe(numbe);
+    number = TrRe(numbe);
 }
 int numb = Convert.ToInt32(number);
 int rezult = SumNum(numb);
